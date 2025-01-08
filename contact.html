@@ -116,10 +116,11 @@
                                         style="height: 49px;" 
                                         id="person-select">
                                         <option selected disabled>Pilih jenis keluhan/Servis</option>
-                                        <option value="1">Laptop/Komputer</option>
-                                        <option value="2">Listrik/Perangkat Elektronik</option>
-                                        <option value="3">AC/Frezeer</option>
-                                        <option value="4">CCTV</option>
+                                        <option value="Laptop/Komputer">Laptop/Komputer</option>
+                                        <option value="Listrik/Elektronik">Listrik/Perangkat Elektronik</option>
+                                        <option value="AC/Frezeer">AC/Frezeer</option>
+                                        <option value="CCTV">CCTV</option>
+                                        <option value="DLL">DLL</option>
                                     </select>
                                 </div>
                             
@@ -137,8 +138,8 @@
                                 function sendToWhatsApp() {
                                     const selectElement = document.getElementById('person-select');
                                     const selectedValue = selectElement.value;
-                                    const baseURL = 'https://wa.me/625736710072';
-                                    const defaultMessage = 'Halo, saya ingin booking!';
+                                    const baseURL = 'https://wa.me/6285736710072';
+                                    const defaultMessage = 'Halo, saya ingin berkonsultasi terkait';
                                     
                                     // Cek apakah pengguna sudah memilih jumlah orang
                                     if (!selectedValue) {
@@ -147,7 +148,7 @@
                                     }
                             
                                     // Buat pesan WhatsApp dengan data dari dropdown
-                                    const message = `${defaultMessage} Saya ingin memesan untuk ${selectedValue} orang.`;
+                                    const message = `${defaultMessage} Servis & Produk ${selectedValue} .`;
                                     window.location.href = `${baseURL}?text=${encodeURIComponent(message)}`;
                                 }
                             </script>
